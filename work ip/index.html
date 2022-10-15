@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div class="form-group">
+<h3>Проверка подлинности ip-адреса.</h3><p>
+<label for="inp_1">Введите ip-адрес:</label>
+  <input type="text" class="form-control" id="ip">
+  <p>
+</div>
+<button onclick="multi()"  class="btn btn-primary" >Проверить IP</button>
+<script>
+function multi(){
+    var n=(document.getElementById('ip').value);
+    var regexp=/\b((([1-9])|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|(25[0-5]))\.(((\d|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|(25[0-5]))\.){2})(\d|([1-9][0-9])|(1[0-9][0-9])|(2[0-4][0-9])|(25[0-5])))\b/;
+    if((regexp.test(n))==true)
+    {
+      document.write(n);
+    }
+    else
+    {
+      document.write("Ip-адрес - некорректный");
+    }
+}
+</script>
+</body>
+</html>

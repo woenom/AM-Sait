@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script>
+var q=0;
+var max = prompt('Введите максимальное колличество объектов');
+var arr = [];
+    function create (mark,num){
+      this.mark = mark;
+      this.num = num;
+      this.print = function(){
+        document.write("Марка:"+this.mark+" Номер:"+this.num+"<br>")
+      }
+    }
+while(true){
+var m = prompt('Введите марку машины');
+var n = prompt('Введите номер машины');
+var use = new create(m,n);
+arr.push(use);
+arr[q].print();
+q++;
+var c = confirm('Хотите выйти?');
+if(q==max){
+  break;
+}
+if(c==true){
+  break;
+}
+}
+</script>
+</body>
+</html>
